@@ -1,0 +1,571 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadados para SEO e Redes Sociais -->
+    <meta name="description" content="IPTV KRIPTON TOPTV Premium - Teste grátis por 24 horas. +10.000 canais ao vivo, +50.000 filmes e séries em HD e 4K.">
+    <meta name="keywords" content="IPTV, streaming, filmes, séries, canais ao vivo, HD, 4K, teste grátis">
+    <meta name="author" content="IPTV KRIPTON TOPTV Premium">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="IPTV KRIPTON TOPTV Premium - Teste Grátis">
+    <meta property="og:description" content="Teste grátis por 24 horas. +10.000 canais ao vivo, +50.000 filmes e séries em HD e 4K.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/25D366/FFFFFF?text=IPTV+PREMIUM">
+    
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="IPTV KRIPTON TOPTV Premium - Teste Grátis">
+    <meta property="twitter:description" content="Teste grátis por 24 horas. +10.000 canais ao vivo, +50.000 filmes e séries em HD e 4K.">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630/25D366/FFFFFF?text=IPTV+PREMIUM">
+    
+    <title>IPTV KRIPTON TOPTV Premium - Teste Grátis</title>
+    
+    <!-- Favicon para a aba do navegador -->
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/124/124034.png">
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Seção de Cabeçalho Principal -->
+        <header class="header">
+            <h1>IPTV PREMIUM</h1>
+            <p>Sua Diversão em HD e 4k</p>
+        </header>
+
+        <!-- Formulário Modal de Contato (pop-up) -->
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>🚀 Solicite Seu Teste Grátis!</h2>
+                <p class="modal-subtitle">Preencha os dados e entraremos em contato via WhatsApp para liberar seu acesso.</p>
+                
+                <form id="contactForm">
+                    <!-- Campo Nome Completo -->
+                    <div class="form-group">
+                        <label for="name">Nome Completo:</label>
+                        <input type="text" id="name" name="name" required placeholder="Seu nome aqui">
+                    </div>
+                    
+                    <!-- Campo Email -->
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="seu.email@example.com">
+                    </div>
+                    
+                    <!-- Campo WhatsApp com validação de formato flexível -->
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp:</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required 
+                               placeholder="(13) 99628-6876 ou 13996286876 ou 13 996286876" 
+                               pattern="^(?:(?:\+55|55)?\s?)?(?:(?:\([0-9]{2}\)|[0-9]{2})\s?)?[0-9]{4,5}[-\s]?[0-9]{4}$" 
+                               title="Formatos aceitos: (13) 99628-6876, 13996286876, 13 996286876, 5513 996286876, 5513996286876, 13 99628-6876">
+                    </div>
+                    
+                    <!-- Campo de seleção de Dispositivo -->
+                    <div class="form-group">
+                        <label for="device">Qual dispositivo você vai usar?</label>
+                        <select id="device" name="device" required>
+                            <option value="">Selecione o dispositivo</option>
+                            <option value="Smart TV">Smart TV</option>
+                            <option value="TV Box">TV Box</option>
+                            <option value="Celular">Celular</option>
+                            <option value="Desktop">Desktop</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Campo condicional para Marca da TV (visível apenas para Smart TV) -->
+                    <div class="form-group" id="tvBrandGroup" style="display: none;">
+                        <label for="tvBrand">Marca da TV (ex: Samsung, LG):</label>
+                        <input type="text" id="tvBrand" name="tvBrand" placeholder="Ex: Samsung">
+                    </div>
+                    
+                    <!-- Campo condicional para Tipo de Celular (visível apenas para Celular) -->
+                    <div class="form-group" id="phoneTypeGroup" style="display: none;">
+                        <label for="phoneType">Tipo de Celular:</label>
+                        <select id="phoneType" name="phoneType">
+                            <option value="">Selecione o tipo</option>
+                            <option value="Android">Android</option>
+                            <option value="iPhone">iPhone (iOS)</option>
+                        </select>
+                    </div>
+
+                    <!-- Campo condicional para Sistema Operacional do Desktop (visível apenas para Desktop) -->
+                    <div class="form-group" id="desktopOSGroup" style="display: none;">
+                        <label for="desktopOS">Sistema Operacional do Desktop:</label>
+                        <select id="desktopOS" name="desktopOS">
+                            <option value="">Selecione o SO</option>
+                            <option value="Windows">Windows</option>
+                            <option value="Linux">Linux</option>
+                            <option value="Ubuntu">Ubuntu</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Botão de Envio do Formulário para WhatsApp -->
+                    <button type="submit" class="btn btn-primary form-submit-btn">
+                        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+                        Enviar para WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Seção Principal (Hero Section) -->
+        <section class="hero-section">
+            <h2>🎬 Filmes e Séries em Alta Qualidade 🎬</h2>
+            <p class="highlight-text">✨ Faça seu teste grátis por 24 horas! ✨</p>
+            
+            <img src="./photo_2025-06-08_04-23-40.png" 
+                 alt="Cinema Premium - Filmes e Séries em HD" 
+                 class="hero-image">
+            
+            <div class="features">
+                <span class="highlight">+10.000 Canais</span> ao vivo<br>
+                <span class="highlight">+50.000 Filmes</span> e Séries<br>
+                <span class="highlight">Qualidade HD</span> e 4K<br>
+                <span class="highlight">Suporte 24/7</span>
+            </div>
+        </section>
+
+        <!-- Seção de Filmes e Lançamentos -->
+        <section class="movies-section">
+            <!-- Card de Filme 1 -->
+            <div class="movie-card">
+                <img src="https://ingresso-a.akamaihd.net/b2b/production/uploads/article/image/3347/65fe251b124ee247c110178514c8e165.jpg" 
+                     alt="Avatar 3">
+                <h3>Avatar 3 - Em Breve</h3>
+                <p class="subtitle">O aguardado retorno de James Cameron</p>
+                <div class="tags">
+                    <span class="tag year">2025</span>
+                    <span class="tag premium">Pré-venda</span>
+                </div>
+                <p>Assista em primeira mão este sucesso de bilheteria em qualidade 4K HDR. Disponível em nosso catálogo assim que lançado.</p>
+            </div>
+
+            <!-- Card de Filme 2 -->
+            <div class="movie-card">
+                <img src="data:image/jpeg;base64,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" 
+                     alt="Peter Pan - Pesadelo na Terra do Nunca">
+                <h3>Peter Pan - Pesadelo na Terra do Nunca</h3>
+                <p class="subtitle">A clássica história infantil ganha uma versão sombria.</p>
+                <div class="tags">
+                    <span class="tag year">2025</span>
+                    <span class="tag premium">Pré-venda</span>
+                </div>
+                <p>A clássica história infantil ganha uma versão sombria. Wendy tenta salvar seu irmão Michael das garras de um Peter Pan aterrorizante — uma figura que nem nas piores pesadelos de uma criança poderia ser imaginada.</p>
+            </div>
+        </section>
+
+        <!-- Seção de Destaque de Conteúdo -->
+        <section class="content-highlight">
+            <h3>🎬 Conteúdo Exclusivo</h3>
+            <p>Além destes lançamentos, você terá acesso a mais de 50.000 títulos, incluindo filmes, séries, documentários e canais ao vivo em HD e 4K. Tudo isso com atualizações diárias e suporte técnico 24/7.</p>
+        </section>
+
+        <!-- Seção de Compatibilidade de Dispositivos -->
+        <section class="devices-section">
+            <div class="section-header">
+                <h3>🚀 Compatibilidade Total!</h3>
+                <p class="devices-subtitle">Funciona em qualquer dispositivo que você já tem</p>
+            </div>
+            
+            <div class="devices-grid">
+                <!-- Card de Dispositivo: Smart TV -->
+                <div class="device-card">
+                    <div class="device-icon">📺</div>
+                    <h4>Smart TV</h4>
+                    <p>Samsung, LG, Sony, Philips e todas as marcas</p>
+                    <div class="compatibility-badge">100% Compatível</div>
+                </div>
+                
+                <!-- Card de Dispositivo: TV Box -->
+                <div class="device-card">
+                    <div class="device-icon">📱</div>
+                    <h4>TV Box</h4>
+                    <p>Android TV, Fire Stick, Chromecast, Mi Box</p>
+                    <div class="compatibility-badge">Plug & Play</div>
+                </div>
+                
+                <!-- Card de Dispositivo: Celular -->
+                <div class="device-card">
+                    <div class="device-icon">📲</div>
+                    <h4>Celular</h4>
+                    <p>iPhone, Samsung, Xiaomi, Motorola e mais</p>
+                    <div class="compatibility-badge">App Nativo</div>
+                </div>
+                
+                <!-- Card de Dispositivo: Computador -->
+                <div class="device-card">
+                    <div class="device-icon">💻</div>
+                    <h4>Computador</h4>
+                    <p>Windows, Mac, Linux - Qualquer navegador</p>
+                    <div class="compatibility-badge">Web Player</div>
+                </div>
+            </div>
+            
+            <!-- Requisito de Internet -->
+            <div class="internet-requirement">
+                <div class="wifi-icon">📶</div>
+                <div class="internet-text">
+                    <h4>E só precisa de uma <span class="highlight">internet estável</span>!</h4>
+                    <p>Qualquer conexão de 10MB ou mais funciona perfeitamente</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Chamada para Ação (CTA) -->
+        <section class="cta-section">
+            <h3>✨ Teste Grátis por 24 Horas ✨</h3>
+            <p>Experimente agora mesmo e tenha acesso a todo nosso conteúdo premium!</p>
+            
+            <!-- Botão Principal de CTA para WhatsApp -->
+            <a href="https://wa.me/5513996756517" class="btn btn-primary">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+                QUERO TESTAR AGORA
+            </a>
+            
+            <!-- Botão Secundário de CTA para WhatsApp -->
+            <a href="https://wa.me/5513996756517" class="btn btn-secondary">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828307.png" alt="Info">
+                Ver Planos e Preços
+            </a>
+            
+            <!-- Garantias e Benefícios -->
+            <div class="guarantee">
+                <p>
+                    <span class="check">✓</span> Teste sem compromisso<br>
+                    <span class="check">✓</span> Suporte 24/7 via WhatsApp<br>
+                    <span class="check">✓</span> Cancelamento a qualquer momento
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção de Benefícios Adicionais -->
+        <section class="benefits">
+            <h4><span style="color: #25D366;">🎁</span> Benefícios Exclusivos</h4>
+            
+            <!-- Item de Benefício 1 -->
+            <div class="benefit-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828307.png" alt="Check">
+                <span>Instalação em até 3 dispositivos</span>
+            </div>
+            
+            <!-- Item de Benefício 2 -->
+            <div class="benefit-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828307.png" alt="Check">
+                <span>Canais em HD e 4K</span>
+            </div>
+            
+            <!-- Item de Benefício 3 -->
+            <div class="benefit-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828307.png" alt="Check">
+                <span>Filmes e séries atualizados diariamente</span>
+            </div>
+            
+            <!-- Item de Benefício 4 -->
+            <div class="benefit-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828307.png" alt="Check">
+                <span>Suporte técnico via WhatsApp</span>
+            </div>
+            
+            <!-- Item de Benefício 5 -->
+            <div class="benefit-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828307.png" alt="Check">
+                <span>Sem fidelidade</span>
+            </div>
+            
+            <!-- Item de Benefício 6 -->
+            <div class="benefit-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828307.png" alt="Check">
+                <span>Acesso a conteúdo exclusivo</span>
+            </div>
+            
+            <!-- Item de Benefício 7 -->
+            <div class="benefit-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828307.png" alt="Check">
+                <span>Guia de programação EPG</span>
+            </div>
+        </section>
+
+        <!-- Seção de Rodapé -->
+        <footer class="footer">
+            <p class="copyright">© 2024 IPTV KRIPTON TOPTV Premium<br>Todos os direitos reservados</p>
+            <p class="disclaimer">Este é um serviço de streaming independente</p>
+        </footer>
+    </div>
+
+    <!-- Script JavaScript para interatividade da página -->
+    <script>
+        // Função para rolagem suave (smooth scrolling) para âncoras internas
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Previne o comportamento padrão do clique no link
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Rola até o elemento de destino com um comportamento suave
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Adiciona uma classe 'loaded' ao body quando a página termina de carregar
+        // Isso pode ser usado para animações de carregamento CSS
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        // Garante que o Document Object Model (DOM) esteja completamente carregado
+        // antes de executar o script JavaScript para evitar erros de elementos não encontrados.
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                console.log('DOM completamente carregado. Iniciando script do modal.');
+
+                // --- Seleção de Elementos do DOM para o Modal de Contato ---
+                // Seleciona o elemento principal do modal pelo ID
+                const contactModal = document.getElementById('contactModal');
+                // Se o modal não for encontrado, loga um erro e interrompe o script.
+                if (!contactModal) {
+                    console.error('Erro: Elemento com ID \'contactModal\' não encontrado!');
+                    return; 
+                }
+
+                // Seleciona o botão de fechar dentro do modal
+                const closeButton = document.querySelector('.close-button');
+                // Se o botão de fechar não for encontrado, loga um erro e interrompe o script.
+                if (!closeButton) {
+                    console.error('Erro: Botão de fechar (\'.close-button\') não encontrado!');
+                    return;
+                }
+
+                // Seleciona o formulário de contato pelo ID
+                const contactForm = document.getElementById('contactForm');
+                // Se o formulário não for encontrado, loga um erro e interrompe o script.
+                if (!contactForm) {
+                    console.error('Erro: Formulário com ID \'contactForm\' não encontrado!');
+                    return;
+                }
+
+                // Seleciona o campo de seleção de dispositivo
+                const deviceSelect = document.getElementById('device');
+                // Se o select de dispositivo não for encontrado, loga um erro e interrompe o script.
+                if (!deviceSelect) {
+                    console.error('Erro: Select de dispositivo (\'#device\') não encontrado!');
+                    return;
+                }
+
+                // Seleciona os grupos de campos condicionais (inicialmente ocultos)
+                const tvBrandGroup = document.getElementById('tvBrandGroup');
+                const phoneTypeGroup = document.getElementById('phoneTypeGroup');
+                const desktopOSGroup = document.getElementById('desktopOSGroup');
+                
+                // Número de WhatsApp para onde os dados serão enviados
+                const whatsAppNumber = '13996756517'; 
+
+                // --- Funções para Controle do Modal ---
+
+                /**
+                 * Abre o modal de contato, tornando-o visível.
+                 */
+                function openModal() {
+                    contactModal.style.display = 'flex'; // Usa flexbox para centralizar o modal
+                    console.log('Modal aberto.');
+                }
+
+                /**
+                 * Fecha o modal de contato, ocultando-o e resetando o formulário.
+                 * Também esconde todos os campos condicionais e remove o atributo 'required'.
+                 */
+                function closeModal() {
+                    contactModal.style.display = 'none'; // Oculta o modal
+                    contactForm.reset(); // Limpa todos os campos do formulário
+                    
+                    // Esconde todos os campos condicionais e remove o atributo 'required' por padrão
+                    if (tvBrandGroup) {
+                        tvBrandGroup.style.display = 'none';
+                        tvBrandGroup.querySelector('input').removeAttribute('required');
+                    }
+                    if (phoneTypeGroup) {
+                        phoneTypeGroup.style.display = 'none';
+                        phoneTypeGroup.querySelector('select').removeAttribute('required');
+                    }
+                    if (desktopOSGroup) {
+                        desktopOSGroup.style.display = 'none';
+                        desktopOSGroup.querySelector('select').removeAttribute('required');
+                    }
+                    console.log('Modal fechado.');
+                }
+
+                // --- Event Listeners para Abrir e Fechar o Modal ---
+
+                // Adiciona um event listener a todos os botões com as classes '.btn-primary' ou '.btn-secondary'
+                // para abrir o modal quando clicados.
+                document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+                    // Verifica se o botão é o botão de envio do formulário para não adicionar o listener de abertura a ele.
+                    // O botão de envio terá seu próprio listener 'submit' no formulário.
+                    if (!button.classList.contains('form-submit-btn')) {
+                        button.addEventListener('click', function(e) {
+                            e.preventDefault(); // Impede o comportamento padrão do link (se for um <a>)
+                            openModal(); // Chama a função para abrir o modal
+                            console.log('Botão de abrir modal clicado.');
+                        });
+                        console.log('Event listener adicionado ao botão:', button);
+                    }
+                });
+
+                // Adiciona um event listener ao botão de fechar ('x') dentro do modal
+                closeButton.addEventListener('click', closeModal);
+
+                // Adiciona um event listener para fechar o modal quando o usuário clica fora do conteúdo do modal
+                window.addEventListener('click', function(event) {
+                    if (event.target == contactModal) {
+                        closeModal();
+                    }
+                });
+
+                // --- Lógica para Mostrar/Esconder Campos Condicionais no Formulário ---
+
+                // Adiciona um event listener para detectar mudanças no campo de seleção de dispositivo
+                deviceSelect.addEventListener('change', function() {
+                    // Primeiro, esconde todos os campos condicionais e remove o atributo 'required'
+                    // para garantir que apenas o campo relevante seja exibido e validado.
+                    if (tvBrandGroup) {
+                        tvBrandGroup.style.display = 'none';
+                        tvBrandGroup.querySelector('input').removeAttribute('required');
+                    }
+                    if (phoneTypeGroup) {
+                        phoneTypeGroup.style.display = 'none';
+                        phoneTypeGroup.querySelector('select').removeAttribute('required');
+                    }
+                    if (desktopOSGroup) {
+                        desktopOSGroup.style.display = 'none';
+                        desktopOSGroup.querySelector('select').removeAttribute('required');
+                    }
+
+                    const selectedDevice = deviceSelect.value;
+
+                    // Com base no dispositivo selecionado, exibe o campo condicional apropriado
+                    if (selectedDevice === 'Smart TV') {
+                        if (tvBrandGroup) {
+                            tvBrandGroup.style.display = 'block';
+                            tvBrandGroup.querySelector('input').setAttribute('required', 'true'); // Torna o campo obrigatório
+                        }
+                    } else if (selectedDevice === 'Celular') {
+                        if (phoneTypeGroup) {
+                            phoneTypeGroup.style.display = 'block';
+                            phoneTypeGroup.querySelector('select').setAttribute('required', 'true');
+                        }
+                    } else if (selectedDevice === 'Desktop') {
+                        if (desktopOSGroup) {
+                            desktopOSGroup.style.display = 'block';
+                            desktopOSGroup.querySelector('select').setAttribute('required', 'true');
+                        }
+                    }
+                });
+
+                // --- Lógica de Envio do Formulário para WhatsApp ---
+
+                // Adiciona um event listener para o evento 'submit' do formulário
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Previne o envio padrão do formulário (que recarregaria a página)
+
+                    // Validação flexível para o formato do número de WhatsApp
+                    const whatsappInput = document.getElementById('whatsapp');
+                    const whatsappValue = whatsappInput.value.trim();
+                    
+                    // Função para normalizar o número (remove caracteres especiais e espaços)
+                    function normalizePhoneNumber(phone) {
+                        return phone.replace(/[\s\(\)\-]/g, '');
+                    }
+                    
+                    // Função para validar se o número tem pelo menos 10 dígitos
+                    function isValidPhoneNumber(phone) {
+                        const normalized = normalizePhoneNumber(phone);
+                        return normalized.length >= 10 && normalized.length <= 13;
+                    }
+                    
+                    if (!isValidPhoneNumber(whatsappValue)) {
+                        alert('Por favor, insira um número de WhatsApp válido. Formatos aceitos: (13) 99628-6876, 13996286876, 13 996286876, 5513 996286876, 5513996286876');
+                        return; // Interrompe o envio se o número for inválido
+                    }
+
+                    // Coleta os valores de todos os campos do formulário
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const whatsapp = normalizePhoneNumber(whatsappValue); // Usa o número normalizado na mensagem
+                    const device = document.getElementById('device').value;
+                    const tvBrand = document.getElementById('tvBrand').value; // Valor do campo da marca da TV
+                    const phoneType = document.getElementById('phoneType').value; // Valor do campo tipo de celular
+                    const desktopOS = document.getElementById('desktopOS').value; // Valor do campo SO do desktop
+
+                    // Constrói a mensagem personalizada para o WhatsApp
+                    let message = `*Novo Pedido de Teste IPTV!*
+
+`;
+                    message += `*Nome:* ${name}
+`;
+                    message += `*Email:* ${email}
+`;
+                    message += `*WhatsApp:* ${whatsapp}
+`;
+                    message += `*Dispositivo:* ${device}
+`;
+                    
+                    // Adiciona informações condicionais à mensagem, se aplicável
+                    if (device === 'Smart TV' && tvBrand) {
+                        message += `*Marca da TV:* ${tvBrand}
+`;
+                    }
+                    if (device === 'Celular' && phoneType) {
+                        message += `*Tipo de Celular:* ${phoneType}
+`;
+                    }
+                    if (device === 'Desktop' && desktopOS) {
+                        message += `*Sistema Operacional do Desktop:* ${desktopOS}
+`;
+                    }
+                    message += `
+_Enviado pelo formulário da Landing Page_`;
+
+                    // Codifica a mensagem para ser usada em uma URL (substitui espaços, caracteres especiais, etc.)
+                    const encodedMessage = encodeURIComponent(message);
+                    // Constrói a URL final do WhatsApp API
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsAppNumber}&text=${encodedMessage}`;
+
+                    // --- Depuração (MANTENDO PARA VOCÊ CONTINUAR DIAGNÓSTICO SE NECESSÁRIO) ---
+                    // Estas mensagens serão exibidas no console do navegador para ajudar a depurar o que está sendo enviado.
+                    console.log('Mensagem WhatsApp:', message);
+                    console.log('URL WhatsApp:', whatsappUrl);
+
+                    // --- Tentativa de Abrir a Janela do WhatsApp ---
+                    // Tenta abrir a URL do WhatsApp em uma nova aba/janela.
+                    const newWindow = window.open(whatsappUrl, '_blank');
+
+                    // Verifica se a nova janela foi bloqueada por um bloqueador de pop-ups do navegador.
+                    if (newWindow) {
+                        closeModal(); // Fecha o modal apenas se a janela foi aberta com sucesso
+                        alert('Solicitação enviada! Redirecionando para o WhatsApp.');
+                    } else {
+                        // Alerta o usuário caso o pop-up tenha sido bloqueado e sugere uma solução.
+                        alert('Atenção: Seu navegador pode ter bloqueado o pop-up do WhatsApp. Por favor, desative o bloqueador de pop-ups ou copie a mensagem e envie manualmente.');
+                    }
+                });
+            } catch (error) {
+                // Captura e loga quaisquer erros que ocorram durante a inicialização do script do modal.
+                console.error('Erro ao inicializar o script do modal:', error);
+            }
+        });
+
+    </script>
+</body>
+</html> 
