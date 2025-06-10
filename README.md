@@ -152,3 +152,4 @@ Este projeto é de uso exclusivo para o serviço IPTV KRIPTON TOPTV Premium.
 ---
 
 **Desenvolvido com ❤️ para máxima compatibilidade e performance** 
+**Quem pode me ajuda com pix assim ja consigo colocar mais projotos aqui meu whatsapp e Pix para futuros projetos e (13) 99675-6517**
